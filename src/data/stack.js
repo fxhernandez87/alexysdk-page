@@ -8,7 +8,7 @@ export default {
     {
       id: 'php',
       name: 'php',
-      logo: 'php.png',
+      logo: 'php.svg',
     },
     {
       id: 'C#',
@@ -40,7 +40,7 @@ export default {
     {
       id: 'ant',
       name: 'Ant Design',
-      logo: 'antd.png',
+      logo: 'ant.svg',
     },
     {
       id: 'semantic',
@@ -50,32 +50,32 @@ export default {
     {
       id: 'bootstrap',
       name: 'Bootstrap',
-      logo: 'bootstrap.png',
+      logo: 'bootstrap.jpg',
     },
     {
       id: 'sagas',
       name: 'Sagas',
-      logo: 'sagas.png',
+      logo: 'sagas.jpg',
     },
     {
       id: 'axios',
       name: 'Axios',
-      logo: 'axios.png',
+      logo: 'axios.jpg',
     },
     {
       id: 'aurelia',
       name: 'Aurelia',
-      logo: 'aurelia.png',
+      logo: 'aurelia.jpg',
     },
     {
       id: 'angularjs',
       name: 'AngularJS',
-      logo: 'angularjs.png',
+      logo: 'angularjs.svg',
     },
     {
       id: 'angularmaterial',
       name: 'Angular Material',
-      logo: 'angular-material.png',
+      logo: 'angularmaterial.png',
     },
     {
       id: 'ionic',
@@ -85,7 +85,7 @@ export default {
     {
       id: 'jquery',
       name: 'Jquery',
-      logo: 'jquery.png',
+      logo: 'jquery.jpg',
     },
   ],
   backEnd: [
@@ -101,7 +101,7 @@ export default {
     },
     {
       id: 'mongo',
-      name: 'MongoDB',
+      name: 'Mongo DB',
       logo: 'mongo.png',
     },
     {
@@ -134,7 +134,7 @@ export default {
     {
       id: 'webstorm',
       name: 'Webstorm',
-      logo: 'webstorm.png',
+      logo: 'webstorm.svg',
     },
     {
       id: 'vscode',
@@ -204,7 +204,7 @@ export default {
     {
       id: 'mocha',
       name: 'Mocha',
-      logo: 'mocha.png',
+      logo: 'mocha.svg',
     },
     {
       id: 'swagger',

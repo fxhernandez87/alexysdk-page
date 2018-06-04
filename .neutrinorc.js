@@ -5,10 +5,17 @@ module.exports = {
       '@neutrinojs/react',
       {
         html: {
-          title: '_alexysdk-page'
+          title: 'Alexys Gonzalez'
         }
       }
     ],
+    ['@neutrinojs/style-loader', {
+      loaders: [{
+        loader: 'sass-loader',
+        useId: 'sass',
+      }],
+      test: /\.(sass|scss)$/,
+    }],
     '@neutrinojs/jest'
   ]
 };

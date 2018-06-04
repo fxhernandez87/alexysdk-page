@@ -13,10 +13,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@neutrinojs/style-loader": "^8.2.3",
+    "bulma": "^0.7.1",
+    "node-sass": "^4.9.0",
     "prop-types": "^15.6.1",
+    "proppy": "^1.2.0",
+    "proppy-react": "^1.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-hot-loader": "^4.2.0"
+    "react-hot-loader": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "sass-loader": "^7.0.2",
+    "sophia-components": "^0.1.2"
   },
   "devDependencies": {
     "@neutrinojs/airbnb": "^8.2.3",
