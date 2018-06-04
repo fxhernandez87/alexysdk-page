@@ -1,16 +1,20 @@
 import React from 'react';
-import { Section, Content, Title } from 'sophia-components';
+import { Hero, HeroBody, HeroFoot, Title, Subtitle } from 'sophia-components';
 import MessageContext from '../../context/message';
+import ProjectTabs from './components/ProjectTabs';
 
 const Projects = () => (
   <MessageContext.Consumer>
     {({ projects }) => (
-      <Section>
-        <Content>
+      <Hero>
+        <HeroBody>
           <Title>{projects.title}</Title>
-          <p>{projects.introduction}</p>
-        </Content>
-      </Section>
+          <Subtitle>{projects.introduction}</Subtitle>
+        </HeroBody>
+        <HeroFoot>
+          <ProjectTabs />
+        </HeroFoot>
+      </Hero>
     )}
   </MessageContext.Consumer>
 );
