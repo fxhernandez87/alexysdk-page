@@ -1,7 +1,10 @@
+/* eslint-disable react/jsx-filename-extension */
+import React, { Fragment } from 'react';
+
 export default {
   es: {
     about: {
-      title: 'Hola, mi nombre es Alexys Gonzalez',
+      title: <Fragment>Hola, mi nombre es <span className="alternative-font">Alexys Gonzalez</span></Fragment>,
       paragraphs: [
         'Soy un desarrollador de Aplicaciones Web, Aplicaciones Moviles Hibridas y Videojuegos.',
       ],
@@ -35,7 +38,7 @@ export default {
   },
   en: {
     about: {
-      title: 'Hello, my name is Alexys Gonzalez',
+      title: <Fragment>Hello, my name is <span className="alternative-font">Alexys Gonzalez</span></Fragment>,
       paragraphs: [
         'I\'m a Web Application, Hybrids Mobile Apps and Video Games Developer',
       ],

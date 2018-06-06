@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid,no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {
   Navbar as NavbarBulma,
   NavbarBrand,
@@ -15,6 +15,7 @@ import {
 import { withStateHandlers } from 'proppy';
 import { attach } from 'proppy-react';
 import LanguageContext from '../../context/language';
+import './navbar.sass';
 
 const P = withStateHandlers(
   {
@@ -26,10 +27,10 @@ const P = withStateHandlers(
 );
 
 const Navbar = ({ active, toggleActive }) => (
-  <NavbarBulma dark>
+  <NavbarBulma white>
     <Container>
       <NavbarBrand onBurgerClick={toggleActive}>
-        <NavLink className="navbar-item" to="/" exact activeClassName="is-active">Alexys DK</NavLink>
+        <Link className="navbar-item" to="/">Alexys DK</Link>
       </NavbarBrand>
       <NavbarMenu active={active}>
         <NavbarStart>
@@ -41,8 +42,8 @@ const Navbar = ({ active, toggleActive }) => (
           <LanguageContext.Consumer>
             {({ language, setLanguage }) => (
               <Buttons>
-                <Button dark inverted={language === 'es'} onClick={() => setLanguage('es')}>ES</Button>
-                <Button dark inverted={language === 'en'} onClick={() => setLanguage('en')}>EN</Button>
+                <Button dark inverted={language !== 'es'} onClick={() => setLanguage('es')}>ES</Button>
+                <Button dark inverted={language !== 'en'} onClick={() => setLanguage('en')}>EN</Button>
               </Buttons>
             )}
           </LanguageContext.Consumer>
