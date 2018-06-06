@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Columns, Column } from 'sophia-components';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { withState } from 'proppy';
 import { attach } from 'proppy-react';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 import About from '../../routes/About';
 import Projects from '../../routes/Projects';
@@ -20,14 +18,9 @@ const App = props => (
     <LanguageContext.Provider value={props}>
       <MessageContext.Provider value={messages[props.language]}>
         <Navbar />
-        <Columns>
-          <Sidebar />
-          <Column paddingless>
-            <Route exact path="/" component={About} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-          </Column>
-        </Columns>
+        <Route exact path="/" component={About} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
       </MessageContext.Provider>
     </LanguageContext.Provider>
   </BrowserRouter>

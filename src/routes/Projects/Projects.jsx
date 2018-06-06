@@ -21,20 +21,22 @@ const Projects = ({ tabIndex, changeTab }) => (
     {({ projects }) => (
       <Fragment>
         <Hero dark>
-          <HeroBody>
-            <Title>{projects.title}</Title>
-            <Subtitle>{projects.introduction}</Subtitle>
-          </HeroBody>
-          <HeroFoot style={{ paddingLeft: 24 }}>
-            <ProjectTabs
-              messages={projects}
-              tabs={projectData.order}
-              tabIndex={tabIndex}
-              changeTab={changeTab}
-            />
-          </HeroFoot>
+          <Container>
+            <HeroBody>
+              <Title>{projects.title}</Title>
+              <Subtitle>{projects.introduction}</Subtitle>
+            </HeroBody>
+            <HeroFoot style={{ paddingLeft: 24 }}>
+              <ProjectTabs
+                messages={projects}
+                tabs={projectData.order}
+                tabIndex={tabIndex}
+                changeTab={changeTab}
+              />
+            </HeroFoot>
+          </Container>
         </Hero>
-        <Container fluid style={{ margin: 20 }}>
+        <Container style={{ marginTop: 20 }}>
           <ProjectBody messages={projects} projects={projectData[projectData.order[tabIndex]]} />
         </Container>
       </Fragment>

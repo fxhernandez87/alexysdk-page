@@ -21,10 +21,17 @@ const Bundle = ({ title, items }) => (
     <CardContent>
       <Columns mobile multiline>
         {items.map(item => (
-          <Column className="is-2-tablet" three="widescreen" two="desktop" six="mobile">
+          <Column
+            className="is-2-tablet"
+            three="widescreen"
+            two="desktop"
+            six="mobile"
+            key={item.id}
+          >
             <Image
               key={item.id}
               title={item.name}
+              alt={item.name}
               src={`/static/logo/${item.logo}`}
               ratio="square"
               style={{ margin: 0 }}
