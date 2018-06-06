@@ -22,7 +22,7 @@ const App = props => (
         <Navbar />
         <Columns>
           <Sidebar />
-          <Column>
+          <Column paddingless>
             <Route exact path="/" component={About} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />

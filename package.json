@@ -21,9 +21,9 @@
     "proppy-react": "^1.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-hot-loader": "^4.2.0",
+    "react-hot-loader": "^4.3.0",
     "react-router-dom": "^4.2.2",
-    "sass-loader": "^7.0.2",
+    "sass-loader": "^7.0.3",
     "sophia-components": "^0.1.3"
   },
   "devDependencies": {

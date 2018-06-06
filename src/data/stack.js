@@ -1,4 +1,4 @@
-export default {
+const stack = {
   languages: [
     {
       id: 'js',
@@ -225,3 +225,11 @@ export default {
     },
   ],
 };
+
+export const mapped = Object.entries(stack).reduce((acum, [type, items]) => {
+  const normalized = items
+    .reduce((acumItems, item) => ({ ...acumItems, [item.id]: { ...item, type } }), {});
+  return { ...acum, ...normalized };
+}, {});
+
+export default stack;

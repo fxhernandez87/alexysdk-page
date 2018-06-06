@@ -1,22 +1,50 @@
-import React from 'react';
-import { Hero, HeroBody, HeroFoot, Title, Subtitle } from 'sophia-components';
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { Hero, HeroBody, HeroFoot, Title, Subtitle, Container } from 'sophia-components';
+import { withStateHandlers } from 'proppy';
+import { attach } from 'proppy-react';
 import MessageContext from '../../context/message';
 import ProjectTabs from './components/ProjectTabs';
+import ProjectBody from './components/ProjectBody';
+import projectData from '../../data/projects';
+import './projects.sass';
 
-const Projects = () => (
+const P = withStateHandlers(
+  { tabIndex: 0 },
+  {
+    changeTab: () => tabIndex => ({ tabIndex }),
+  },
+);
+
+const Projects = ({ tabIndex, changeTab }) => (
   <MessageContext.Consumer>
     {({ projects }) => (
-      <Hero>
-        <HeroBody>
-          <Title>{projects.title}</Title>
-          <Subtitle>{projects.introduction}</Subtitle>
-        </HeroBody>
-        <HeroFoot>
-          <ProjectTabs />
-        </HeroFoot>
-      </Hero>
+      <Fragment>
+        <Hero dark>
+          <HeroBody>
+            <Title>{projects.title}</Title>
+            <Subtitle>{projects.introduction}</Subtitle>
+          </HeroBody>
+          <HeroFoot style={{ paddingLeft: 24 }}>
+            <ProjectTabs
+              messages={projects}
+              tabs={projectData.order}
+              tabIndex={tabIndex}
+              changeTab={changeTab}
+            />
+          </HeroFoot>
+        </Hero>
+        <Container fluid style={{ margin: 20 }}>
+          <ProjectBody messages={projects} projects={projectData[projectData.order[tabIndex]]} />
+        </Container>
+      </Fragment>
     )}
   </MessageContext.Consumer>
 );
 
-export default Projects;
+Projects.propTypes = {
+  tabIndex: PropTypes.number.isRequired,
+  changeTab: PropTypes.func.isRequired,
+};
+
+export default attach(P)(Projects);
