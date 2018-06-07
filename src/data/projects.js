@@ -1,5 +1,10 @@
 export default {
   order: ['web', 'hybrids', 'games'],
+  icons: {
+    web: 'fas fa-globe',
+    hybrids: 'fas fa-mobile-alt',
+    games: 'fas fa-gamepad',
+  },
   web: [
     {
       id: 'projectsophia',
@@ -57,6 +62,24 @@ export default {
       stack: ['angularjs', 'bootstrap', 'codeigniter', 'mysql'],
     },
     {
+      id: 'gamelife',
+      img: 'gamelife.jpg',
+      name: 'Game Of Life',
+      stack: ['bootstrap', 'js'],
+      links: [
+        {
+          title: 'Demo',
+          img: 'logo/webpage.png',
+          href: 'https://alexysbike.github.io/game-life/index.html',
+        },
+        {
+          title: 'Repo',
+          img: 'logo/github.svg',
+          href: 'https://github.com/alexysbike/game-life',
+        },
+      ],
+    },
+    {
       id: 'battlesimulator',
       img: 'battlesimulator.png',
       name: 'Battle Simulator',
@@ -67,12 +90,6 @@ export default {
       img: 'gerenciales.jpg',
       name: 'Soluciones Gerenciales',
       stack: ['codeigniter', 'bootstrap', 'mysql', 'jquery'],
-    },
-    {
-      id: 'gamelife',
-      img: 'gamelife.jpg',
-      name: 'Game Of Life',
-      stack: ['bootstrap', 'js'],
     },
   ],
   hybrids: [

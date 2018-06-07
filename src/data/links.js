@@ -1,21 +1,21 @@
 export default {
   linkedin: {
-    img: 'linkedin.png',
+    icon: 'fab fa-linkedin',
     href: 'https://www.linkedin.com/in/alexys-gonzalez',
     title: 'Linkedin',
   },
   github: {
-    img: 'github.png',
+    icon: 'fab fa-github',
     href: 'https://github.com/alexysbike',
     title: 'Github',
   },
   dkcoders: {
-    img: 'dkcoders.png',
+    icon: 'fab fa-github',
     href: 'https://github.com/DKCoders',
     title: 'Github DKCoders',
   },
   codewars: {
-    img: 'codewars.png',
+    icon: 'fas fa-code',
     href: 'https://www.codewars.com/users/alexysbike',
     title: 'Codewars',
   },

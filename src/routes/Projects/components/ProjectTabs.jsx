@@ -1,22 +1,33 @@
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tabs } from 'sophia-components';
+import { Menu, MenuList, MenuListItem, Icon } from 'sophia-components';
+import projects from '../../../data/projects';
 
 const ProjectTabs = ({
-  messages, tabs, tabIndex, changeTab,
-}) => {
-  const tabsTranslated = tabs.map(tab => messages.tabs[tab]);
-  return (
-    <Tabs boxed tabs={tabsTranslated} activeTabIndex={tabIndex} onTabClick={changeTab} />
-  );
-};
+  messages, tabSelected, setTabSelected,
+}) => (
+  <Menu className="stack-menu">
+    <MenuList>
+      {projects.order.map(item => (
+        <MenuListItem
+          size="5"
+          key={item}
+          active={item === tabSelected}
+          onClick={() => setTabSelected(item)}
+        >
+          <span>
+            <Icon icon={projects.icons[item]} />{messages.tabs[item]}
+          </span>
+        </MenuListItem>
+    ))}
+    </MenuList>
+  </Menu>
+);
 
 ProjectTabs.propTypes = {
   messages: PropTypes.shape().isRequired,
-  tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  tabIndex: PropTypes.number.isRequired,
-  changeTab: PropTypes.func.isRequired,
+  tabSelected: PropTypes.string.isRequired,
+  setTabSelected: PropTypes.func.isRequired,
 };
 
 export default ProjectTabs;

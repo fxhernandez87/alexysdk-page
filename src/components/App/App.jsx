@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withState } from 'proppy';
 import { attach } from 'proppy-react';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 import About from '../../routes/About';
 import Stack from '../../routes/Stack';
 import Projects from '../../routes/Projects';
@@ -21,6 +22,7 @@ const App = props => (
       <Stack />
       <Projects />
       <Contact />
+      <Footer />
     </MessageContext.Provider>
   </LanguageContext.Provider>
 );

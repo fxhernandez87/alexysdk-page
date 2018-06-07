@@ -1,7 +1,15 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Hero, HeroBody, HeroFoot, Title, Subtitle, Container } from 'sophia-components';
-import { withStateHandlers } from 'proppy';
+import {
+  Hero,
+  HeroBody,
+  Title,
+  Subtitle,
+  Container,
+  Columns,
+  Column,
+} from 'sophia-components';
+import { withState } from 'proppy';
 import { attach } from 'proppy-react';
 import MessageContext from '../../context/message';
 import ProjectTabs from './components/ProjectTabs';
@@ -9,14 +17,9 @@ import ProjectBody from './components/ProjectBody';
 import projectData from '../../data/projects';
 import './projects.sass';
 
-const P = withStateHandlers(
-  { tabIndex: 0 },
-  {
-    changeTab: () => tabIndex => ({ tabIndex }),
-  },
-);
+const P = withState('tabSelected', 'setTabSelected', 'web');
 
-const Projects = ({ tabIndex, changeTab }) => (
+const Projects = ({ tabSelected, setTabSelected }) => (
   <MessageContext.Consumer>
     {({ projects }) => (
       <Fragment>
@@ -27,19 +30,23 @@ const Projects = ({ tabIndex, changeTab }) => (
               <Subtitle>{projects.introduction}</Subtitle>
             </Container>
           </HeroBody>
-          <HeroFoot style={{ paddingLeft: 24 }}>
-            <Container>
+        </Hero>
+        <Container className="adk-section">
+          <Columns>
+            <Column oneQuarter>
               <ProjectTabs
                 messages={projects}
-                tabs={projectData.order}
-                tabIndex={tabIndex}
-                changeTab={changeTab}
+                tabSelected={tabSelected}
+                setTabSelected={setTabSelected}
               />
-            </Container>
-          </HeroFoot>
-        </Hero>
-        <Container style={{ marginTop: 20 }}>
-          <ProjectBody messages={projects} projects={projectData[projectData.order[tabIndex]]} />
+            </Column>
+            <Column>
+              <ProjectBody
+                messages={projects}
+                projects={projectData[tabSelected]}
+              />
+            </Column>
+          </Columns>
         </Container>
       </Fragment>
     )}
@@ -47,8 +54,8 @@ const Projects = ({ tabIndex, changeTab }) => (
 );
 
 Projects.propTypes = {
-  tabIndex: PropTypes.number.isRequired,
-  changeTab: PropTypes.func.isRequired,
+  tabSelected: PropTypes.string.isRequired,
+  setTabSelected: PropTypes.func.isRequired,
 };
 
 export default attach(P)(Projects);

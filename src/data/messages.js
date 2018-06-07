@@ -57,7 +57,12 @@ export default {
     },
     contact: {
       title: 'Contactame',
-      message: 'Si desea contactarme mandame un correo electronico a alexysdk@gmail.com y con gusto te respondere a la brevedad posible.',
+      message: 'Si desea contactarme mandame un mensaje o un correo electrónico a alexysdk@gmail.com y con gusto te responderé a la brevedad posible.',
+      form: {
+        title: 'Tu Correo Electrónico',
+        message: 'Tu Mensaje',
+        send: 'Enviar Mensaje',
+      },
     },
   },
   en: {
@@ -115,7 +120,12 @@ export default {
     },
     contact: {
       title: 'Contact me',
-      message: 'If you want to contact me, send me a mail to alexysdk@gmail.com, I will answer you as soon as possible',
+      message: 'If you want to contact me, send me a message or a mail to alexysdk@gmail.com, I will answer you as soon as possible',
+      form: {
+        title: 'Your Email',
+        message: 'Your Message',
+        send: 'Send Message',
+      },
     },
   },
 };

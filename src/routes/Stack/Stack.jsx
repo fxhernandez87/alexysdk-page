@@ -34,7 +34,7 @@ const Stack = ({ stackSelected, setStackSelected }) => (
             </Container>
           </HeroBody>
         </Hero>
-        <Container style={{ paddingTop: 20, paddingBottom: 20 }}>
+        <Container className="adk-section">
           <Columns>
             <Column oneQuarter>
               <Menu className="stack-menu">
