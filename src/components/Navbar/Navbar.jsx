@@ -30,7 +30,7 @@ const Navbar = ({ active, toggleActive }) => (
   <NavbarBulma dark fixedTop>
     <Container>
       <NavbarBrand onBurgerClick={toggleActive}>
-        <NavbarItem className="">
+        <NavbarItem href="#about">
           <pre className="is-paddingless" style={{ fontSize: '1.5em', background: 'none' }}>
             <span className="has-text-primary has-text-weight-bold">let</span> <span style={{ color: 'whitesmoke' }}>adk<span id="cursor">_</span></span>
           </pre>
@@ -39,9 +39,9 @@ const Navbar = ({ active, toggleActive }) => (
       <NavbarMenu active={active}>
         <NavbarStart />
         <NavbarEnd>
-          <NavbarItem>Stack</NavbarItem>
-          <NavbarItem>Projects</NavbarItem>
-          <NavbarItem>Contact</NavbarItem>
+          <NavbarItem href="#stack">Stack</NavbarItem>
+          <NavbarItem href="#projects">Projects</NavbarItem>
+          <NavbarItem href="#contact">Contact</NavbarItem>
           <LanguageContext.Consumer>
             {({ language, setLanguage }) => (
               <Buttons style={{ marginLeft: 10 }}>

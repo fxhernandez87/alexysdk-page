@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import {
   Title,
@@ -21,6 +22,7 @@ const Contact = () => (
   <MessageContext.Consumer>
     {({ contact }) => (
       <Fragment>
+        <a name="contact">&nbsp;</a>
         <Hero dark>
           <HeroBody>
             <Container>
@@ -54,8 +56,8 @@ const Contact = () => (
               <Box>
                 <ul>
                   {Object.values(links).map(({ href, icon, title }) => (
-                    <li>
-                      <Button key={href} white as="a" href={href} target="_blank" icon={icon}>{title}</Button>
+                    <li key={href}>
+                      <Button white as="a" href={href} target="_blank" icon={icon}>{title}</Button>
                     </li>
                   ))}
                 </ul>

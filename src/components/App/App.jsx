@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withState } from 'proppy';
@@ -17,6 +18,7 @@ const P = withState('language', 'setLanguage', 'es');
 const App = props => (
   <LanguageContext.Provider value={props}>
     <MessageContext.Provider value={messages[props.language]}>
+      <a name="about">&nbsp;</a>
       <Navbar />
       <About />
       <Stack />

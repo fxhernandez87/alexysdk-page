@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -26,6 +27,7 @@ const Stack = ({ stackSelected, setStackSelected }) => (
   <MessageContext.Consumer>
     {({ stack: stackMessages }) => (
       <Fragment>
+        <a name="stack">&nbsp;</a>
         <Hero dark>
           <HeroBody>
             <Container>
