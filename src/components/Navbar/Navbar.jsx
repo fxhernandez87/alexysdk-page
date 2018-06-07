@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid,no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink, Link } from 'react-router-dom';
 import {
   Navbar as NavbarBulma,
   NavbarBrand,
   NavbarMenu,
   NavbarStart,
   NavbarEnd,
+  NavbarItem,
   Container,
   Button,
   Buttons,
@@ -27,23 +27,26 @@ const P = withStateHandlers(
 );
 
 const Navbar = ({ active, toggleActive }) => (
-  <NavbarBulma white>
+  <NavbarBulma dark fixedTop>
     <Container>
       <NavbarBrand onBurgerClick={toggleActive}>
-        <Link className="navbar-item" to="/">Alexys DK</Link>
+        <NavbarItem className="">
+          <pre className="is-paddingless" style={{ fontSize: '1.5em', background: 'none' }}>
+            <span className="has-text-primary has-text-weight-bold">let</span> <span style={{ color: 'whitesmoke' }}>adk<span id="cursor">_</span></span>
+          </pre>
+        </NavbarItem>
       </NavbarBrand>
       <NavbarMenu active={active}>
-        <NavbarStart>
-          <NavLink className="navbar-item" to="/" exact activeClassName="is-active">About</NavLink>
-          <NavLink className="navbar-item" to="/projects" activeClassName="is-active">Projects</NavLink>
-          <NavLink className="navbar-item" to="/contact" activeClassName="is-active">Contact</NavLink>
-        </NavbarStart>
+        <NavbarStart />
         <NavbarEnd>
+          <NavbarItem>Stack</NavbarItem>
+          <NavbarItem>Projects</NavbarItem>
+          <NavbarItem>Contact</NavbarItem>
           <LanguageContext.Consumer>
             {({ language, setLanguage }) => (
-              <Buttons>
-                <Button dark inverted={language !== 'es'} onClick={() => setLanguage('es')}>ES</Button>
-                <Button dark inverted={language !== 'en'} onClick={() => setLanguage('en')}>EN</Button>
+              <Buttons style={{ marginLeft: 10 }}>
+                <Button dark inverted={language === 'es'} onClick={() => setLanguage('es')}>ES</Button>
+                <Button dark inverted={language === 'en'} onClick={() => setLanguage('en')}>EN</Button>
               </Buttons>
             )}
           </LanguageContext.Consumer>

@@ -8,15 +8,17 @@ const ProjectStack = ({ stack, links }) => {
     <Image
       key={item}
       title={mapped[item].name}
-      square={32}
+      alt={mapped[item].name}
+      square="32"
       src={`/static/logo/${mapped[item].logo}`}
     />
   ));
   const linksElement = !links ? null : links.map(link => (
-    <a href={link.href} target="_blank" title={link.title}>
+    <a key={link.href} href={link.href} target="_blank" title={link.title}>
       <Image
+        alt={link.title}
         key={link.href}
-        square={32}
+        square="32"
         src={`/static/${link.img}`}
       />
     </a>

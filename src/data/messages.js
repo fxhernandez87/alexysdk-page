@@ -4,10 +4,14 @@ import React, { Fragment } from 'react';
 export default {
   es: {
     about: {
-      title: <Fragment>Hola, mi nombre es <span className="alternative-font">Alexys Gonzalez</span></Fragment>,
+      title: <Fragment>Hola, mi nombre es <span className="alternative-font my-name">Alexys Gonzalez</span></Fragment>,
       paragraphs: [
         'Soy un desarrollador de Aplicaciones Web, Aplicaciones Moviles Hibridas y Videojuegos.',
       ],
+    },
+    stack: {
+      title: 'Mi Stack',
+      description: 'Estas son las herramientas que uso para completar mis misiones, echa un vistazo:',
     },
     projects: {
       title: 'Mis Proyectos',
@@ -38,10 +42,14 @@ export default {
   },
   en: {
     about: {
-      title: <Fragment>Hello, my name is <span className="alternative-font">Alexys Gonzalez</span></Fragment>,
+      title: <Fragment>Hello, my name is <span className="alternative-font my-name">Alexys Gonzalez</span></Fragment>,
       paragraphs: [
         'I\'m a Web Application, Hybrids Mobile Apps and Video Games Developer',
       ],
+    },
+    stack: {
+      title: 'My Stack',
+      description: 'These are the tools I use to complete my missions. Go ahead, take a look:',
     },
     projects: {
       title: 'My Projects',

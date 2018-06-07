@@ -1,2 +1,12 @@
+/*Side Bar Colors*/
+@keyframes blink
+  from, to
+    color: transparent
+  50%
+    color: whitesmoke
+
 a.navbar-item.is-active
   font-weight: bold
+
+span#cursor
+  animation: 1s blink step-end infinite

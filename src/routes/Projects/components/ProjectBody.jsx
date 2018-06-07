@@ -12,7 +12,7 @@ import ProjectStack from './ProjectStack';
 
 const ProjectBody = ({ projects, messages }) =>
   projects.map(project => (
-    <Card>
+    <Card key={project.id}>
       <CardContent>
         <Columns>
           <Column oneQuarter style={{ padding: 20 }}>
