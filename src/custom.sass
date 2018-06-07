@@ -4,8 +4,12 @@
 
 $primary: #CC7832
 $dark: #001122
+$warning: #FFC66D
 $tablet: 768px
 $desktop: 1023px
+
+$menu-item-active-background-color: $dark
+$menu-item-active-color: $warning
 
 /* latin */
 @font-face
@@ -41,6 +45,12 @@ $family-monospace: 'Droid Sans Mono', monospace
   position: relative
   top: -16px
   left: 20px
+
+.menu-list
+  li
+    font-family: $family-monospace
+  .is-active
+    font-weight: bold
 
 // 6. Import the rest of Bulma
 @import "~bulma/bulma"

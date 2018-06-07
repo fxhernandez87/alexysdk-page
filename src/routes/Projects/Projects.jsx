@@ -23,7 +23,7 @@ const Projects = ({ tabIndex, changeTab }) => (
         <Hero dark>
           <HeroBody>
             <Container>
-              <Title>{projects.title}</Title>
+              <Title text="primary">{projects.title}</Title>
               <Subtitle>{projects.introduction}</Subtitle>
             </Container>
           </HeroBody>

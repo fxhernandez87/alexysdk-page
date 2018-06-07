@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import {
   Title,
   Subtitle,
@@ -7,34 +8,57 @@ import {
   Container,
   Hero,
   HeroBody,
+  Menu,
+  MenuList,
+  MenuListItem,
+  Icon,
 } from 'sophia-components';
+import { withState } from 'proppy';
+import { attach } from 'proppy-react';
 import MessageContext from '../../context/message';
 import stack from '../../data/stack';
 import Bundle from './components/Bundle';
+import './stack.sass';
 
-const Stack = () => (
+const P = withState('stackSelected', 'setStackSelected', 'frontEnd');
+
+const Stack = ({ stackSelected, setStackSelected }) => (
   <MessageContext.Consumer>
     {({ stack: stackMessages }) => (
       <Fragment>
         <Hero dark>
           <HeroBody>
             <Container>
-              <Title>{stackMessages.title}</Title>
+              <Title text="primary">{stackMessages.title}</Title>
               <Subtitle>{stackMessages.description}</Subtitle>
             </Container>
           </HeroBody>
         </Hero>
-        <Container>
+        <Container style={{ paddingTop: 20, paddingBottom: 20 }}>
           <Columns>
-            <Column four>
-              <Bundle title="Front-End" items={stack.frontEnd} />
+            <Column oneQuarter>
+              <Menu className="stack-menu">
+                <MenuList>
+                  {stack.order.map(item => (
+                    <MenuListItem
+                      size="5"
+                      key={item}
+                      active={item === stackSelected}
+                      onClick={() => setStackSelected(item)}
+                    >
+                      <span>
+                        <Icon icon={stack.icons[item]} />{stackMessages[item].title}
+                      </span>
+                    </MenuListItem>
+                  ))}
+                </MenuList>
+              </Menu>
             </Column>
-            <Column four>
-              <Bundle title="Back-End" items={stack.backEnd} />
-              <Bundle title="Languages and Video Games" items={[...stack.languages, ...stack.videoGames]} />
-            </Column>
-            <Column four>
-              <Bundle title="DevTools" items={stack.devTools} />
+            <Column>
+              <Bundle
+                introduction={stackMessages[stackSelected].introduction}
+                items={stack[stackSelected]}
+              />
             </Column>
           </Columns>
         </Container>
@@ -43,4 +67,9 @@ const Stack = () => (
   </MessageContext.Consumer>
 );
 
-export default Stack;
+Stack.propTypes = {
+  stackSelected: PropTypes.string.isRequired,
+  setStackSelected: PropTypes.func.isRequired,
+};
+
+export default attach(P)(Stack);

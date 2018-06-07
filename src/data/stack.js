@@ -232,4 +232,14 @@ export const mapped = Object.entries(stack).reduce((acum, [type, items]) => {
   return { ...acum, ...normalized };
 }, {});
 
-export default stack;
+export default {
+  ...stack,
+  order: ['frontEnd', 'backEnd', 'devTools', 'videoGames', 'languages'],
+  icons: {
+    frontEnd: 'fab fa-react',
+    backEnd: 'fab fa-node-js',
+    languages: 'fas fa-code',
+    devTools: 'fas fa-wrench',
+    videoGames: 'fas fa-gamepad',
+  },
+};

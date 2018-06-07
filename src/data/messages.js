@@ -12,6 +12,26 @@ export default {
     stack: {
       title: 'Mi Stack',
       description: 'Estas son las herramientas que uso para completar mis misiones, echa un vistazo:',
+      frontEnd: {
+        title: 'Front-End',
+        introduction: 'Inicié con jQuery, luego de un par de años me adentré en el mundo de AngularJS, y por cosas del destino, me crucé con React y, fue inevitable, me enamoré del modelo reactivo y del JSX.',
+      },
+      backEnd: {
+        title: 'Back-End',
+        introduction: 'Por muchos años php y Codeigniter fueron mis compañeros en mi viaje por el Back-End, al lado de MySQL como base de datos relacionadas. Hoy en día, NodeJS y Express junto con MongoDB y Redis me ayudan en mi camino a traves de las sendas de los micro servicios.',
+      },
+      devTools: {
+        title: 'DevTools',
+        introduction: 'Mi IDE favorito: Webstorm. Mi Package Manager preferido: NPM. Mi Test Runner: Jest.',
+      },
+      languages: {
+        title: 'Lenguajes',
+        introduction: 'Aunque Javascript es mi lenguaje principal, tanto para front como para back, tambien cuento con solidos conocimientos en php. Por otra parte, he usado C# para el desarrollo de Videojuegos en Unity.',
+      },
+      videoGames: {
+        title: 'Video Juegos',
+        introduction: 'Unity y Phaser.io me han ayudado a hacer prototipos y algunos proyectos pequeños.',
+      },
     },
     projects: {
       title: 'Mis Proyectos',
@@ -50,6 +70,26 @@ export default {
     stack: {
       title: 'My Stack',
       description: 'These are the tools I use to complete my missions. Go ahead, take a look:',
+      frontEnd: {
+        title: 'Front-End',
+        introduction: 'I started with jQuery, after a couple of years I entered the world of AngularJS, and because of destiny, I came across React and, inevitably, fell in love with the reactive model and the JSX.',
+      },
+      backEnd: {
+        title: 'Back-End',
+        introduction: 'For many years php and Codeigniter were my companions in my trip through the Back-End, next to MySQL as a relational database. Today, NodeJS and Express along with MongoDB and Redis help me on my way through the paths of micro services.',
+      },
+      devTools: {
+        title: 'DevTools',
+        introduction: 'My favorite IDE: Webstorm. My preferred Package Manager: NPM. My Test Runner: Jest.',
+      },
+      languages: {
+        title: 'Languages',
+        introduction: 'Although Javascript is my main language, for front and back, I also have solid knowledge in php. On the other hand, I have used C# for Video Games development in Unity.',
+      },
+      videoGames: {
+        title: 'Video Games',
+        introduction: 'Unity and Phaser.io have helped me to make prototypes and small projects.',
+      },
     },
     projects: {
       title: 'My Projects',
