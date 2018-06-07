@@ -32,7 +32,7 @@ export default {
     {
       id: 'notes',
       name: 'Notes Live Coding',
-      img: 'sophia.jpg',
+      img: 'notes.png',
       stack: ['react', 'redux', 'sagas', 'axios', 'bulma', 'node', 'express', 'swagger', 'mongo'],
       links: [
         {
