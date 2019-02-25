@@ -87,6 +87,11 @@ const stack = {
       name: 'Jquery',
       logo: 'jquery.jpg',
     },
+    {
+      id: 'twitter',
+      name: 'Twitter API',
+      logo: 'twitter.png',
+    },
   ],
   backEnd: [
     {

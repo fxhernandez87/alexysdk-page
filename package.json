@@ -15,7 +15,7 @@
   "dependencies": {
     "@neutrinojs/style-loader": "^8.2.3",
     "bulma": "^0.7.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.1",
     "proppy": "^1.2.0",
     "proppy-react": "^1.2.0",

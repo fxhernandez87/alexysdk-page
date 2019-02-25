@@ -4,6 +4,8 @@ import { Image, Level, LevelLeft, LevelRight, LevelItem } from 'sophia-component
 import { mapped } from '../../../data/stack';
 
 const ProjectStack = ({ stack, links }) => {
+  console.log(stack);
+  console.log(links);
   const images = stack.map(item => (
     <Image
       key={item}
