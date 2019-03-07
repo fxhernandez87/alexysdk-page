@@ -32,7 +32,7 @@ const Navbar = ({ active, toggleActive }) => (
       <NavbarBrand onBurgerClick={toggleActive}>
         <NavbarItem href="#about">
           <pre className="is-paddingless" style={{ fontSize: '1.5em', background: 'none' }}>
-            <span className="has-text-primary has-text-weight-bold">let</span> <span style={{ color: 'whitesmoke' }}>adk<span id="cursor">_</span></span>
+            <span className="has-text-primary has-text-weight-bold">FX</span><span style={{ color: 'whitesmoke' }}>Hernandez<span id="cursor">_</span></span>
           </pre>
         </NavbarItem>
       </NavbarBrand>

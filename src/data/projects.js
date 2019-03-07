@@ -4,18 +4,18 @@ export default {
     web: 'fas fa-globe',
     hybrids: 'fas fa-mobile-alt',
     games: 'fas fa-gamepad',
-    arduino: 'fas fa-gamepad',
+    arduino: 'fas fa-microchip',
   },
   web: [
     {
       id: 'steelmen',
-      name: 'Steelmem',
-      img: 'steelmen.jpg',
+      name: 'Steelmen',
+      img: 'steelmen.png',
       stack: ['react', 'redux', 'rematch'],
       links: [
         {
           title: 'Webpage',
-          img: 'logo/webpage.svg',
+          img: 'logo/webpage.png',
           href: 'http://steelmen.com.ar',
         },
       ],
@@ -23,12 +23,12 @@ export default {
     {
       id: 'wikimia',
       name: 'Wikimia',
-      img: 'wikimia.jpg',
+      img: 'wikimia.jpeg',
       stack: ['jquery', 'php', 'mysql', 'js'],
       links: [
         {
           title: 'Webpage',
-          img: 'logo/webpage.svg',
+          img: 'logo/webpage.png',
           href: 'http://wikimia.com.ar',
         },
       ],
@@ -60,6 +60,13 @@ export default {
       stack: ['js', 'php', 'mysql', 'twitter'],
       links: [],
     },
+    {
+      id: 'aguamat',
+      img: 'aguamat.png',
+      name: 'Aguamat Encuestas',
+      stack: ['js', 'php', 'mysql'],
+      links: [],
+    },
   ],
   hybrids: [
     {
@@ -78,7 +85,7 @@ export default {
       id: 'wikimia',
       img: 'wikimia.png',
       name: 'Wikimia v2',
-      stack: ['nodejs', 'mongo', 'express', 'react', 'rematch', 'axios'],
+      stack: ['node', 'mongo', 'express', 'react', 'rematch', 'axios'],
     },
   ],
   games: [
@@ -92,25 +99,25 @@ export default {
       id: 'spaceshinvaders',
       img: 'spaceship.jpg',
       name: 'Space Invaders Game',
-      stack: ['Unity'],
+      stack: ['unity'],
     },
     {
       id: 'pimball',
       img: 'pimball.jpg',
       name: 'Pimball Demo',
-      stack: ['UDK'],
+      stack: ['udk'],
     },
     {
       id: 'samurais',
       img: 'samurais.jpg',
       name: 'Samurais Prototype',
-      stack: ['UDK'],
+      stack: ['udk'],
     },
     {
       id: 'archnoid',
       img: 'archnoid.jpg',
       name: 'Archnoid',
-      stack: ['Pascal'],
+      stack: ['pascal'],
     },
   ],
   arduino: [

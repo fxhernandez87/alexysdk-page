@@ -1,22 +1,17 @@
 export default {
   linkedin: {
     icon: 'fab fa-linkedin',
-    href: 'https://www.linkedin.com/in/alexys-gonzalez',
+    href: 'https://www.linkedin.com/in/francisco-hernandez-36b53421/',
     title: 'Linkedin',
   },
   github: {
     icon: 'fab fa-github',
-    href: 'https://github.com/alexysbike',
+    href: 'https://github.com/fxhernandez87',
     title: 'Github',
-  },
-  dkcoders: {
-    icon: 'fab fa-github',
-    href: 'https://github.com/DKCoders',
-    title: 'Github DKCoders',
   },
   codewars: {
     icon: 'fas fa-code',
-    href: 'https://www.codewars.com/users/alexysbike',
+    href: 'https://www.codewars.com/users/fxhernandez87',
     title: 'Codewars',
   },
 };

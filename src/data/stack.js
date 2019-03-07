@@ -134,6 +134,16 @@ const stack = {
       name: 'Codeigniter',
       logo: 'codeigniter.png',
     },
+    {
+      id: 'cordova',
+      name: 'Cordova',
+      logo: 'codeigniter.png',
+    },
+    {
+      id: 'phonegap',
+      name: 'Phonegap',
+      logo: 'codeigniter.png',
+    },
   ],
   devTools: [
     {
@@ -226,6 +236,38 @@ const stack = {
     {
       id: 'unity',
       name: 'Unity',
+      logo: 'unity.png',
+    },
+    {
+      id: 'udk',
+      name: 'UDK',
+      logo: 'unity.png',
+    },
+    {
+      id: 'pascal',
+      name: 'Pascal',
+      logo: 'unity.png',
+    },
+  ],
+  arduino: [
+    {
+      id: 'arduino',
+      name: 'Phaser.io',
+      logo: 'phaser.png',
+    },
+    {
+      id: 'rfid',
+      name: 'Unity',
+      logo: 'unity.png',
+    },
+    {
+      id: 'udk',
+      name: 'UDK',
+      logo: 'unity.png',
+    },
+    {
+      id: 'pascal',
+      name: 'Pascal',
       logo: 'unity.png',
     },
   ],

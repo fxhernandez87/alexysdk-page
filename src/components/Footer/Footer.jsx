@@ -5,7 +5,7 @@ const Footer = () => (
   <FooterBulma>
     <Container>
       <Content textCentered>
-        <p>Alexys Gonzalez.</p>
+        <p>Francisco Hernández.</p>
       </Content>
     </Container>
   </FooterBulma>
